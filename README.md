@@ -1,5 +1,7 @@
 # Copycat #
 
+This fork fix copycat to use it with rails 5.
+
 Copycat is a Rails engine that allows users to edit live website copy.
 
 ## How to use ##
@@ -63,7 +65,7 @@ COPYCAT_DEBUG=1 rails s
 
 ## Example ##
 
-See an example application [here](https://github.com/Vermonster/copycat-demo). 
+See an example application [here](https://github.com/Vermonster/copycat-demo).
 
 ## Developing ##
 
