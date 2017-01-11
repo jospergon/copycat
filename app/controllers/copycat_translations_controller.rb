@@ -1,5 +1,5 @@
 class CopycatTranslationsController < ActionController::Base
-  
+
   http_basic_authenticate_with :name => Copycat.username, :password => Copycat.password
 
   layout 'copycat'
@@ -20,13 +20,13 @@ class CopycatTranslationsController < ActionController::Base
     else
       @copycat_translations = []
     end
-    @locale_names = CopycatTranslation.find(:all, select: 'distinct locale').map(&:locale)
+    @locale_names = CopycatTranslation.select('distinct locale').map(&:locale)
   end
 
   def edit
     @copycat_translation = CopycatTranslation.find(params[:id])
   end
-  
+
   def update
     @copycat_translation = CopycatTranslation.find(params[:id])
     @copycat_translation.value = params[:copycat_translation][:value]
